@@ -12,8 +12,11 @@ const postRoute = require('./routes/post')
 app.use('/api/auth', authRoute);
 app.use('/api/post', postRoute);
 
-mongoose.connect("mongodb+srv://Bhu1:MNCCS@cluster0.yhyjg.mongodb.net/DBKGP?retryWrites=true&w=majority", {useNewUrlParser:true, useUnifiedTopology:true, useFindAndModify:false,useCreateIndex:true,}, ()=>{
+mongoose.connect("mongodb+srv://Bhu1:MNCCS@cluster0.yhyjg.mongodb.net/DBKGP?retryWrites=true&w=majority", 
+                 {useNewUrlParser:true, 
+                  useUnifiedTopology:true, 
+                  useFindAndModify:false,
+                  useCreateIndex:true,}, ()=>{
     console.log('MongoDB is Connected...');
 })
-
-app.listen(process.env.PORT||7001, ()=> console.log('Server is running :)!'))
+app.listen(process.env.PORT||7001, ()=> console.log('Server is running...'))
